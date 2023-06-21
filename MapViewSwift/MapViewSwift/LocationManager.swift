@@ -10,20 +10,37 @@ import CoreLocation
 
 class LocationManger : NSObject ,CLLocationManagerDelegate{
     static let shared = LocationManger()
-    var completion : ((CLLocation) -> Void)?
+    var completion : ((CLLocation?) -> Void)?
     let manager = CLLocationManager()
     
-    public func getUserLocation(completion : @escaping ((CLLocation) -> Void)) {
+    private override init() {
+        super.init()
+        self.manager.delegate = self
+    }
+    
+    public func getUserLocation(completion : @escaping ((CLLocation?) -> Void)) {
+        self.completion = completion
         manager.requestWhenInUseAuthorization()
-        manager.desiredAccuracy = kCLLocationAccuracyBest
-        manager.delegate = self
-        manager.startUpdatingLocation()
+        DispatchQueue.global().async {[self] in
+            if CLLocationManager.locationServicesEnabled(){
+                manager.desiredAccuracy = kCLLocationAccuracyBest
+                manager.startUpdatingLocation()
+            }else {
+                completion(nil)
+            }
+        }
+        
+        
     }
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first else{
             return
         }
+        manager.stopUpdatingLocation()
         completion?(location)
-//        manager.stopUpdatingLocation()
     }
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+            print("Location update error: \(error.localizedDescription)")
+        completion?(nil)
+        }
 }
