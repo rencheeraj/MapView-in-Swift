@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		742F1F7F2A457E6A006D1EBF /* MapOverlayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742F1F7E2A457E6A006D1EBF /* MapOverlayCollectionViewCell.swift */; };
 		745EC5502A42B879006FEA8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745EC54F2A42B879006FEA8A /* AppDelegate.swift */; };
 		745EC5522A42B879006FEA8A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745EC5512A42B879006FEA8A /* SceneDelegate.swift */; };
 		745EC5542A42B879006FEA8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745EC5532A42B879006FEA8A /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		742F1F7E2A457E6A006D1EBF /* MapOverlayCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapOverlayCollectionViewCell.swift; sourceTree = "<group>"; };
 		745EC54C2A42B879006FEA8A /* MapViewSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapViewSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		745EC54F2A42B879006FEA8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		745EC5512A42B879006FEA8A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				745EC54F2A42B879006FEA8A /* AppDelegate.swift */,
 				745EC5512A42B879006FEA8A /* SceneDelegate.swift */,
 				745EC5532A42B879006FEA8A /* ViewController.swift */,
+				742F1F7E2A457E6A006D1EBF /* MapOverlayCollectionViewCell.swift */,
 				745EC5632A42CE17006FEA8A /* LocationManager.swift */,
 				745EC5552A42B879006FEA8A /* Main.storyboard */,
 				745EC5582A42B87A006FEA8A /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 				745EC5542A42B879006FEA8A /* ViewController.swift in Sources */,
 				745EC5502A42B879006FEA8A /* AppDelegate.swift in Sources */,
 				745EC5522A42B879006FEA8A /* SceneDelegate.swift in Sources */,
+				742F1F7F2A457E6A006D1EBF /* MapOverlayCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
